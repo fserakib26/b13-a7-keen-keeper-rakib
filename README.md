@@ -1,16 +1,31 @@
-# React + Vite
+# Name of my Project: 
+Keen Keeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Short description of my Project
 
-Currently, two official plugins are available:
+KeenKeeper একটি React ওয়েব অ্যাপ, যেখানে ব্যবহারকারীরা তাদের বন্ধুদের সাথে যোগাযোগ ট্র্যাক করতে পারে। এখানে বন্ধুদের তালিকা, বিস্তারিত তথ্য, এবং কল/টেক্সট/ভিডিও হিস্টোরি টাইমলাইন আকারে দেখা যায়।
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+প্রতিবার কোনো বন্ধুদের সাথে Call, Text বা Video করলে সেটি টাইমলাইনে সেভ হয় এবং একটি টোস্ট নোটিফিকেশন দেখায়। এছাড়া একটি Stats পেজে সব অ্যাক্টিভিটির চার্টও দেখা যায়।
 
-## React Compiler
+পুরো অ্যাপটি মোবাইল, ট্যাব এবং ডেস্কটপে সুন্দরভাবে কাজ করে এবং beginner-friendly ভাবে React দিয়ে তৈরি করা হয়েছে।
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technology Used
+এই প্রজেক্টটি বানাতে আমি কিছু সহজ এবং আধুনিক ওয়েব ডেভেলপমেন্ট টুল ব্যবহার করেছি। যেমন—
 
-## Expanding the ESLint configuration
+React.js — ইউজার ইন্টারফেস (UI) তৈরি করার জন্য
+React Router DOM — পেজের মধ্যে নেভিগেশন বা রাউটিং করার জন্য
+Tailwind CSS — দ্রুত এবং সুন্দর ডিজাইন ও রেসপনসিভ লেআউট বানানোর জন্য
+Recharts — স্ট্যাটস পেজে চার্ট (Pie Chart) দেখানোর জন্য
+JavaScript (ES6) — লজিক এবং ফাংশনালিটি তৈরি করার জন্য
+JSON File — ফ্রেন্ডদের ডেটা সংরক্ষণ করার জন্য
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+এই টুলগুলো ব্যবহার করে আমি একটি সম্পূর্ণ রেসপনসিভ এবং beginner-friendly ওয়েব অ্যাপ তৈরি করেছি।
+
+
+## 3 Key Feature
+ফ্রেন্ড ম্যানেজমেন্ট সিস্টেম
+বন্ধুদের তালিকা কার্ড আকারে দেখা যায় এবং প্রতিটি বন্ধুর বিস্তারিত তথ্য আলাদা পেজে দেখা সম্ভব।
+টাইমলাইন ট্র্যাকিং সিস্টেম
+Call, Text, Video করলে সেটি অটোমেটিকভাবে টাইমলাইনে সেভ হয় এবং সব ইন্টারঅ্যাকশনের হিস্টোরি দেখা যায়।
+স্ট্যাটস ও অ্যানালিটিক্স
+Recharts ব্যবহার করে মোট কতগুলো Call, Text, Video হয়েছে তা সুন্দরভাবে Pie Chart আকারে দেখানো হয়।
