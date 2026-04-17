@@ -13,6 +13,10 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Homepage/>,
+      },
+      {
+        path: "/friends",
+        element: <Friends/>,
       },      
       {
         path: "/friendDetails/:id",

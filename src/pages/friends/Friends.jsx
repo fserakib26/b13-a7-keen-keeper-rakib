@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { FriendContext } from '../../context/FriendContext';
 
 const Friends = () => {
+
+  const {storedFriend} = useContext(FriendContext)
+  
+  console.log(storedFriend);
+
   return (
-    <div>Friends Page</div>
+    <div></div>
   )
 }
 

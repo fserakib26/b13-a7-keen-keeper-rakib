@@ -16,7 +16,7 @@ const Navbar = () => {
       </NavLink>
     </li>
     <li>
-      <NavLink to={"/timeline"} className={({isActive})=> isActive ? "bg-[#244d3f] text-white" : "" }>
+      <NavLink to={"/friends"} className={({isActive})=> isActive ? "bg-[#244d3f] text-white" : "" }>
         <RiTimeLine />Timeline
       </NavLink>
     </li>
