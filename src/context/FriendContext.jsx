@@ -8,26 +8,62 @@ const FriendProvider = ({children}) => {
   const [storedFriend, setStoredFriend] = useState([]);
   const [storedMessage, setStoredMessage] = useState([]);
   const [storedVideo, setStoredVideo] = useState([]);
+  const [timeline, setTimeline] = useState([]);
     
   const handleAudioCall=(currentFriend)=>{      
   console.log(currentFriend)
-    setStoredFriend((prev)=> [...prev, currentFriend])
-    toast.success("Calling!");
-                  
+
+  setStoredFriend((prev)=> [...prev, currentFriend])
+
+    const newItem = {
+    id: Date.now(),
+    type: "Call",
+    name: currentFriend.name,
+    date: new Date().toLocaleDateString()
   }
+
+  setTimeline(prev => [newItem, ...prev])
+
+  toast.success("Calling!");
+}
+
+
 
   const handleMessage=(currentFriend)=>{    
   console.log(currentFriend)
-    setStoredMessage((prev)=> [...prev, currentFriend]) 
-    toast.success("Message has been send!");
-                  
+
+  setStoredMessage((prev)=> [...prev, currentFriend]) 
+
+  const newItem = {
+    id: Date.now(),
+    type: "Text",
+    name: currentFriend.name,
+    date: new Date().toLocaleDateString()
   }
-  const handleVideo=(currentFriend)=>{      
+
+  setTimeline(prev => [newItem, ...prev])
+
+  toast.success("Message has been send!");
+}
+
+
+
+ const handleVideo=(currentFriend)=>{      
   console.log(currentFriend)
-    setStoredVideo((prev)=> [...prev, currentFriend]) 
-    toast.success("Video Call on going!");
-                  
+
+  setStoredVideo((prev)=> [...prev, currentFriend]) 
+
+  const newItem = {
+    id: Date.now(),
+    type: "Video",
+    name: currentFriend.name,
+    date: new Date().toLocaleDateString()
   }
+
+  setTimeline(prev => [newItem, ...prev])
+
+  toast.success("Video Call on going!");
+}
 
   const data ={   
     storedFriend, 
@@ -38,7 +74,9 @@ const FriendProvider = ({children}) => {
     handleMessage,
     storedVideo,
     setStoredVideo,
-    handleVideo,   
+    handleVideo,
+    timeline,
+    setTimeline,   
 
   };
   return <FriendContext.Provider value={data}>

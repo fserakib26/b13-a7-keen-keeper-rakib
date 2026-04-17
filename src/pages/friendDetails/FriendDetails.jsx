@@ -1,9 +1,11 @@
+import { useNavigate } from 'react-router'
 import React, { use, useContext, useState } from 'react'
 import { FaArchive, FaVideo } from 'react-icons/fa'
 import { FiPhoneCall } from 'react-icons/fi'
 import { IoMdText } from 'react-icons/io'
 import { MdDeleteForever, MdOutlineSnooze } from 'react-icons/md'
-import { useLoaderData, useParams } from 'react-router'
+// import { useLoaderData, useParams } from 'react-router'
+import { useLoaderData, useParams } from 'react-router-dom'
 import { FriendContext } from '../../context/FriendContext'
 
 
@@ -14,6 +16,7 @@ const FriendDetails = () => {
     const friends = useLoaderData()
     const {handleAudioCall, storedFriend, handleMessage, handleVideo} = useContext(FriendContext);
     const expectedFriend = friends.find(friend=> friend.id === Number(friendParamsId));
+    const navigate = useNavigate();
     
     const {
         id,
@@ -112,15 +115,24 @@ const FriendDetails = () => {
                 <div className='border border-gray-100 shadow-md rounded-2xl w-full mb-5 px-15 py-5'>
                     <h2 className='font-bold pb-3'>Quick Check-In</h2>
                     <div className='flex justify-between gap-4'>
-                        <div onClick={()=> handleAudioCall(expectedFriend)} className='bg-[#e9fbf3] border-2 shadow-2xs border-[#e9e9e9] p-5 w-full text-center rounded-2xl cursor-pointer'>
+                        <div onClick={()=>{
+                                handleAudioCall(expectedFriend)
+                                navigate("/timeline")
+                                }} className='bg-[#e9fbf3] border-2 shadow-2xs border-[#e9e9e9] p-5 w-full text-center rounded-2xl cursor-pointer'>
                             <p className='text-2xl flex items-center justify-center '><FiPhoneCall /></p> <br />
                             <p>Call</p>
                         </div>
-                        <div onClick={()=> handleMessage(expectedFriend)} className='bg-[#e9fbf3] border-2 shadow-2xs border-[#e9e9e9] p-5 w-full text-center rounded-2xl cursor-pointer'>
+                        <div onClick={()=>{
+                                handleMessage(expectedFriend)
+                                navigate("/timeline")
+                                }} className='bg-[#e9fbf3] border-2 shadow-2xs border-[#e9e9e9] p-5 w-full text-center rounded-2xl cursor-pointer'>
                             <p className='text-2xl flex items-center justify-center '><IoMdText /></p> <br />
                             <p>Text</p>
                         </div>
-                        <div onClick={()=> handleVideo(expectedFriend)} className='bg-[#e9fbf3] border-2 shadow-2xs border-[#e9e9e9] p-5 w-full text-center rounded-2xl cursor-pointer'>
+                        <div onClick={()=>{
+                                handleVideo(expectedFriend)
+                                navigate("/timeline")
+                                }} className='bg-[#e9fbf3] border-2 shadow-2xs border-[#e9e9e9] p-5 w-full text-center rounded-2xl cursor-pointer'>
                             <p className='text-2xl flex items-center justify-center'><FaVideo /></p> <br />
                             <p>Video</p>
                         </div>
