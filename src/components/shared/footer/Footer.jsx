@@ -29,11 +29,11 @@ const Footer = () => {
                 <div className="divider before:bg-[#1a8862] after:bg-[#1a8862] text-[#1a8862]"></div>            
             </div>
 
-            <div className='flex justify-between text-[#fafafa]'>
-                <div>
+            <div className='flex flex-col lg:flex-row justify-between text-[#fafafa]'>
+                <div className='mb-6 lg:mb-0'>
                     <p>&copy; 2026 KeenKeeper. All rights reserved.</p>
                 </div>
-                <div className='flex gap-10'>
+                <div className='flex flex-col lg:flex-row gap-6 lg:gap-10'>
                     <a href="">Privacy Policy</a>
                     <a href="">Terms of Service</a>
                     <a href="">Cookies</a>
