@@ -1,4 +1,5 @@
 import React, { use } from 'react'
+import FriendsCard from '../shared/friendsCard/FriendsCard';
 
 const friendsPromise = fetch('/friends.json').then(res=>res.json())
 
@@ -6,26 +7,26 @@ const FriendsAll = () => {
 
     const friends = use(friendsPromise)
     
+    const statusColors = {
+    "on-track": "bg-[#244d3f] text-white",
+    "overdue": "bg-[#ef4444] text-white",
+    "almost due": "bg-[#efad44] text-white"    
+    };
 
     return (
        <div className='max-w-7xl mx-auto'>
             <div>
                 <div className="divider before:bg-gray-300 after:bg-gray-300 text-gray-300"></div>            
             </div>
-            <h2 className='font-bold text-3xl'>Your Friends</h2>
+            <h2 className='font-bold text-3xl mb-5 text-center md:text-left'>Your Friends</h2>
 
-            <div className='grid grid-cols-4 gap-2'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-10 p-5'>
                 {
-                    friends.map(friend=> {
-                        return <div>
-                            <div className='bg-white border border-gray-300 shadow rounded-2xl p-5 space-y-4 text-center'>
-                                <img src={friend.picture} alt="" className='rounded-full mx-auto'/>
-                                    <h2 className='font-bold text-2xl'>{friend.name}</h2>
-                                    <p>{friend.days_since_contact}d ago</p>
-                                    <p className='bg-[#cbfadb] text-[#244d3f] rounded-full px-3'>{friend.tags}</p>
-                                    <p>{friend.status}</p>
-                            </div>
-                        </div>
+                    friends.map((friend, ind)=> {
+                        return (
+                            <FriendsCard key={ind} friend={friend} statusColors={statusColors}/>
+                            
+                        )
                     })
                 }
             </div>

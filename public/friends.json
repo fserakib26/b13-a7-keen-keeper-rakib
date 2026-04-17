@@ -6,7 +6,7 @@
     "email": "john.doe@outlook.com",
     "days_since_contact": 18,
     "status": "overdue",
-    "tags": ["college", "close friend", "tech"],
+    "tags": ["college", "school"],
     "bio": "Met during university in Boston. He now works as a software engineer in Seattle, and we used to collaborate on coding projects and late-night study sessions.",
     "goal": 14,
     "next_due_date": "2026-04-10"
@@ -18,7 +18,7 @@
     "email": "sara.khan@gmail.com",
     "days_since_contact": 6,
     "status": "on-track",
-    "tags": ["school friend", "Dhaka", "childhood"],
+    "tags": ["school"],
     "bio": "A childhood friend from Dhaka. We grew up in the same neighborhood and still check in about family updates and local events.",
     "goal": 10,
     "next_due_date": "2026-04-20"
@@ -30,7 +30,7 @@
     "email": "ahmed.rahman@yahoo.com",
     "days_since_contact": 12,
     "status": "almost due",
-    "tags": ["work friend", "project teammate"],
+    "tags": ["work"],
     "bio": "Met at a freelance project collaboration. We often discuss web development trends and occasionally share job opportunities.",
     "goal": 14,
     "next_due_date": "2026-04-18"
@@ -42,7 +42,7 @@
     "email": "emily.chen@icloud.com",
     "days_since_contact": 2,
     "status": "on-track",
-    "tags": ["travel buddy", "photography"],
+    "tags": ["travel buddy"],
     "bio": "Met while traveling in Thailand. We bonded over photography and exploring street food markets across Southeast Asia.",
     "goal": 7,
     "next_due_date": "2026-04-23"
@@ -54,7 +54,7 @@
     "email": "michael.smith@gmail.com",
     "days_since_contact": 25,
     "status": "overdue",
-    "tags": ["gym friend", "fitness"],
+    "tags": ["work"],
     "bio": "Workout partner from the local gym. We used to train together regularly and push each other on strength goals.",
     "goal": 20,
     "next_due_date": "2026-04-05"
@@ -66,7 +66,7 @@
     "email": "fatima.noor@outlook.com",
     "days_since_contact": 9,
     "status": "on-track",
-    "tags": ["college", "research partner"],
+    "tags": ["college"],
     "bio": "Met during university research work. We collaborated on a data science project and still occasionally discuss academic papers.",
     "goal": 14,
     "next_due_date": "2026-04-21"
@@ -78,7 +78,7 @@
     "email": "david.kim@gmail.com",
     "days_since_contact": 14,
     "status": "almost due",
-    "tags": ["gaming", "online friend"],
+    "tags": ["online friend"],
     "bio": "Met through online gaming communities. We often played strategy games together and discussed tech and esports.",
     "goal": 14,
     "next_due_date": "2026-04-17"
@@ -90,7 +90,7 @@
     "email": "ayesha.islam@gmail.com",
     "days_since_contact": 3,
     "status": "on-track",
-    "tags": ["school friend", "design"],
+    "tags": ["school"],
     "bio": "A school friend who later pursued graphic design. We still share creative ideas and occasionally collaborate on small design projects.",
     "goal": 5,
     "next_due_date": "2026-04-19"
