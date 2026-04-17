@@ -12,6 +12,7 @@ import { FriendContext } from '../../context/FriendContext'
 const FriendDetails = () => {
     const {id: friendParamsId} = useParams()
     const friends = useLoaderData()
+    const {handleAudioCall, storedFriend, handleMessage, handleVideo} = useContext(FriendContext);
     const expectedFriend = friends.find(friend=> friend.id === Number(friendParamsId));
     
     const {
@@ -28,7 +29,9 @@ const FriendDetails = () => {
     } = expectedFriend;   
     
 
-    const {handleAudioCall, storedFriend} = useContext(FriendContext);
+   
+    // const {handleMessage} = useContext(FriendContext);
+    // const {handleVideo} = useContext(FriendContext);
     // console.log(handleAudioCall, storedFriend)
    
 
@@ -113,11 +116,11 @@ const FriendDetails = () => {
                             <p className='text-2xl flex items-center justify-center '><FiPhoneCall /></p> <br />
                             <p>Call</p>
                         </div>
-                        <div className='bg-[#e9fbf3] border-2 shadow-2xs border-[#e9e9e9] p-5 w-full text-center rounded-2xl cursor-pointer'>
+                        <div onClick={()=> handleMessage(expectedFriend)} className='bg-[#e9fbf3] border-2 shadow-2xs border-[#e9e9e9] p-5 w-full text-center rounded-2xl cursor-pointer'>
                             <p className='text-2xl flex items-center justify-center '><IoMdText /></p> <br />
                             <p>Text</p>
                         </div>
-                        <div className='bg-[#e9fbf3] border-2 shadow-2xs border-[#e9e9e9] p-5 w-full text-center rounded-2xl cursor-pointer'>
+                        <div onClick={()=> handleVideo(expectedFriend)} className='bg-[#e9fbf3] border-2 shadow-2xs border-[#e9e9e9] p-5 w-full text-center rounded-2xl cursor-pointer'>
                             <p className='text-2xl flex items-center justify-center'><FaVideo /></p> <br />
                             <p>Video</p>
                         </div>
